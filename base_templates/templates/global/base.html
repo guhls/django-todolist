@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+
+        {% include 'todolist/partials/head.html' %}
+
+        <title>{% block title %}{% endblock title %}</title>
+
+    </head>
+
+<body>
+
+    {% include 'todolist/partials/header.html' %}
+
+    {% block content %}{% endblock content %}
+    
+</body>
+</html>
