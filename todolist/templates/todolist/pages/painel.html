@@ -9,19 +9,17 @@
         <div class="main-content">
             <div class="card-group">
                 
-                {% if tasks %}
+                {% if completed_tasks %}
                     <h2>Completed</h2>
-                    {% for task in tasks %}
-                        {% if task.is_completed %}
-                            {% include 'todolist/partials/post.html' %}
-                        {% endif %}
+                    {% for task in completed_tasks %}
+                        {% include 'todolist/partials/post.html' %}
                     {% endfor %}
+                {% endif %}
 
-                    <h2>Not Completed</h2>
-                    {% for task in tasks %}
-                        {% if not task.is_completed %}
-                            {% include 'todolist/partials/post.html' %}
-                        {% endif %}
+                {% if uncompleted_tasks %}
+                    <h2>Uncompleted</h2>
+                    {% for task in uncompleted_tasks %}
+                        {% include 'todolist/partials/post.html' %}
                     {% endfor %}
                 {% endif %}
 
