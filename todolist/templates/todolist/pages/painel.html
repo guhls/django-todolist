@@ -9,16 +9,22 @@
         <div class="main-content">
             <div class="card-group">
                 
-                {% if card_finished %}
-                    <h2>Finished</h2>
-                    {% include 'todolist/partials/post.html' %}    
+                {% if tasks %}
+                    <h2>Completed</h2>
+                    {% for task in tasks %}
+                        {% if task.is_completed %}
+                            {% include 'todolist/partials/post.html' %}
+                        {% endif %}
+                    {% endfor %}
+
+                    <h2>Not Completed</h2>
+                    {% for task in tasks %}
+                        {% if not task.is_completed %}
+                            {% include 'todolist/partials/post.html' %}
+                        {% endif %}
+                    {% endfor %}
                 {% endif %}
 
-                <h2>Not Finished</h2>
-                {% include 'todolist/partials/post.html' %}
-                {% include 'todolist/partials/post.html' %}
-                {% include 'todolist/partials/post.html' %}
-                {% include 'todolist/partials/post.html' %}
             </div>
         </div>
     </div>
