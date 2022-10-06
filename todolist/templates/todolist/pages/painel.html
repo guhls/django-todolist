@@ -8,6 +8,13 @@
     <div class="main-container container">
         <div class="main-content">
             <div class="card-group">
+                
+                {% if card_finished %}
+                    <h2>Finished</h2>
+                    {% include 'todolist/partials/post.html' %}    
+                {% endif %}
+
+                <h2>Not Finished</h2>
                 {% include 'todolist/partials/post.html' %}
                 {% include 'todolist/partials/post.html' %}
                 {% include 'todolist/partials/post.html' %}

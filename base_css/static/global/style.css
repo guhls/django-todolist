@@ -62,7 +62,7 @@ header {
 }
 
 .card:hover {
-    box-shadow: .2rem .2rem;
+    box-shadow: .2rem .2rem black;
 }
 
 .card-title {
@@ -71,4 +71,9 @@ header {
 
 .card-crud {
     padding: 1.2rem 1rem;
+}
+
+.finished {
+    background: rgb(0, 0, 0, .1);
+    box-shadow: none !important;
 }

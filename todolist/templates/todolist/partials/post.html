@@ -1,8 +1,18 @@
-<div class="card">
+<div class="card{% if card_finished %} finished{% endif %}">
     <div class="card-title">
         <span>Title</span>
     </div>
     <div class="card-crud">
-        <span>Deletar | Editar | Concluir</span>
+        <span>
+            <a class="card-delete" href="#">Deletar</a> | 
+            <a class="card-edit" href="#">Editar</a> |
+
+            {% if card_finished %}
+                <a class="card-undone" href="#">Undone</a>
+            {% else %}
+                <a class="card-done" href="#">Done</a>
+            {% endif %}
+
+        </span>
     </div>
 </div>
