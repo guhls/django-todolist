@@ -9,3 +9,6 @@ class Task(models.Model):
     last_updated = models.DateField(auto_now=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, blank=False, null=False)
+
+    def __str__(self) -> str:
+        return self.title
