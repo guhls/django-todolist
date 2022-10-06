@@ -8,9 +8,9 @@
             <a class="card-edit" href="#">Editar</a> |
 
             {% if task.is_completed %}
-                <a class="card-undone" href="#">Undone</a>
+                <a class="card-undone" href=" {% url 'todolist:undone' %}?task_id={{ task.pk }} ">Undone</a>
             {% else %}
-                <a class="card-done" href="#">Done</a>
+                <a class="card-done" href=" {% url 'todolist:done' %}?task_id={{ task.pk }} ">Done</a>
             {% endif %}
 
         </span>

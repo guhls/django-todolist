@@ -5,5 +5,7 @@ from . import views
 app_name = 'todolist'
 
 urlpatterns = [
-    path('painel/', views.painel, name='painel')
+    path('painel/', views.painel, name='painel'),
+    path('done/', views.done, name='done'),
+    path('undone/', views.undone, name='undone'),
 ]
