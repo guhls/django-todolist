@@ -4,8 +4,7 @@
     </div>
     <div class="card-crud">
         <span>
-            <a class="card-delete" href="#">Deletar</a> | 
-            <a class="card-edit" href="#">Editar</a> |
+            <a class="card-delete" href=" {% url 'todolist:delete' %}?task_id={{ task.pk }} ">Deletar</a> |
 
             {% if task.is_completed %}
                 <a class="card-undone" href=" {% url 'todolist:undone' %}?task_id={{ task.pk }} ">Undone</a>

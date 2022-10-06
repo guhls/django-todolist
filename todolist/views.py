@@ -33,3 +33,12 @@ def undone(request):
     task.save()
 
     return redirect('todolist:painel')
+
+
+def delete(request):
+    id_task = request.GET.get('task_id')
+
+    task = Task.objects.get(pk=id_task)
+    task.delete()
+
+    return redirect('todolist:painel')
