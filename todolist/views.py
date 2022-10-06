@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
 
-from .models import Task
+from .models import Task, User
 
 
 def painel(request):
@@ -13,6 +13,15 @@ def painel(request):
         'completed_tasks': completed_tasks,
         'uncompleted_tasks': uncompleted_tasks,
     })
+
+
+def create_view(request):
+    title = request.GET.get('new-card-title')
+    user = User.objects.get(pk=request.user.pk)
+
+    Task.objects.create(title=title, author=user)
+
+    return redirect('todolist:painel')
 
 
 def done(request):
