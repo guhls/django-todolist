@@ -42,6 +42,30 @@ header {
     margin: .4rem;
 }
 
+/* Main */
+.main-content {
+    margin-top: 2rem;
+}
+
+/* Form */
+
+.card-form p {
+    margin: 1rem;
+}
+
+.card-input {
+    padding: 1rem 0;
+    width: 100%;
+    border: hidden;
+    text-indent: 1rem;
+    background-color: white;
+    border-radius: 5rem;
+}
+
+.card-input:focus{
+    outline: none;
+}
+
 /* Card */
 
 .card-group {
