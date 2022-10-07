@@ -1,0 +1,15 @@
+{% extends 'global/base.html' %}
+
+{% block title %}Task View{% endblock title %}
+
+{% block content %}
+    <div class="task-container container">
+        <div class="task-content">
+            <form class="card-form" action=" {% url 'todolist:edit' %} ">
+                <input type="hidden" name="task-id" value="{{task.pk}}">
+                <input class="input" type="text" name="task-title" value="{{task.title}}">
+                <p><i>Digite o título da tarefa e aperte enter em seguida</i></p>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

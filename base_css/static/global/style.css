@@ -20,6 +20,7 @@ header {
 
 .header-container {
     padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 .header-content {
@@ -43,9 +44,6 @@ header {
 }
 
 /* Main */
-.main-content {
-    margin-top: 2rem;
-}
 
 /* Form */
 
@@ -53,7 +51,7 @@ header {
     margin: 1rem;
 }
 
-.card-input {
+.input {
     padding: 1rem 0;
     width: 100%;
     border: hidden;
@@ -62,7 +60,7 @@ header {
     border-radius: 5rem;
 }
 
-.card-input:focus{
+.input:focus{
     outline: none;
 }
 
